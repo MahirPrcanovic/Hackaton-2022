@@ -10,6 +10,8 @@ function App() {
       </Route>
       <Route path="/about">
         <div>About</div>
+        <div>Test</div>
+        <div>Test</div>
       </Route>
     </Switch>
   );
