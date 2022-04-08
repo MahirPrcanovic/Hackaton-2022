@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.container {
+  height: 4.5rem;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: sticky;
+  font-family: "Montserrat", sans-serif;
+  color: #c5c5c5;
+  z-index: 200;
+}
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.logo {
+  font-size: 2.6rem;
+  color: #02c8b5;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+.picture {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: red;
+  background-image: url("../../images/avatar.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.username {
+  font-size: 1.5rem;
+}
+.arrow {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bs {
+  font-size: 1.4rem;
+}
+.iconsmall {
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+}
+.act {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
