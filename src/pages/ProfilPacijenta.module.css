@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.container {
+  width: 100%;
+  margin-left: 5rem;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 2rem;
+}
+.backButton {
+  font-family: "Montserrat", sans-serif;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  color: #7d7d7d;
+  font-size: 1.6rem;
+}
+.backButton:hover {
+  color: #02c8b6;
+}
+.navBar {
+  width: 100%;
+  margin-top: 3rem;
+}
+.overview,
+.medications {
+  font-weight: bold;
+  margin-left: 0.3rem;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  color: #7d7d7d;
+}
+.medications {
+  margin-left: 2rem;
+}
+.overview:hover,
+.medications:hover {
+  color: #02c8b6;
+  cursor: pointer;
+}
+.name {
+  font-size: 3rem;
+}

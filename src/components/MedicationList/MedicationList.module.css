@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.inputField {
+  width: 25rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #9a9a9a;
+}
+.inputField input {
+  width: 90%;
+  height: 90%;
+  border: none;
+}
+.input2:focus {
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+.navBar {
+  margin-top: 5rem;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.select {
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 0.5rem;
+}
+.addMedication {
+  width: 20rem;
+  height: 3.2rem;
+  background-color: #02c8b6;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mediList {
+  width: 100%;
+  margin-top: 5rem;
+}
+.mediListNav {
+  font-family: "Montserrat", sans-serif;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mediListNav p {
+  width: 20%;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.placeHolder {
+  width: 5rem;
+}

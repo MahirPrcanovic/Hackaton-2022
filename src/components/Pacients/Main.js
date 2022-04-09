@@ -2,82 +2,11 @@ import React, { useRef } from "react";
 import classes from "./Main.module.css";
 import { useState } from "react";
 import { useId } from "react";
+import { useHistory } from "react-router-dom";
+import { data } from "../data";
 const Main = () => {
   const [form, setForm] = useState(false);
-  const [pacients, setPacients] = useState([
-    {
-      id: 1,
-      name: "Emir Avdic",
-      dateOfBirth: "23/04/1969",
-      city: "Zenica",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 2,
-      name: "Zinela Mustafic",
-      dateOfBirth: "23/04/1969",
-      city: "Sarajevo",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 3,
-      name: "Enver Klobodanovic",
-      dateOfBirth: "23/04/1969",
-      city: "Maglaj",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 4,
-      name: "Mirza Akča",
-      dateOfBirth: "23/04/1969",
-      city: "Livno",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 5,
-      name: "Vildan Martić",
-      dateOfBirth: "23/04/1969",
-      city: "Travnik",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 6,
-      name: "Marko Martić",
-      dateOfBirth: "23/04/1969",
-      city: "Travnik",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 7,
-      name: "Enes Begović",
-      dateOfBirth: "23/04/1969",
-      city: "Travnik",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 8,
-      name: "Hidajet Hamzić",
-      dateOfBirth: "23/04/1969",
-      city: "Travnik",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-    {
-      id: 9,
-      name: "Husein Gradašević",
-      dateOfBirth: "23/04/1969",
-      city: "Travnik",
-      contact: "0602232232",
-      email: "korisnik.pacijent@outlook.com",
-    },
-  ]);
+  const [pacients, setPacients] = useState(data);
   const [length, setLength] = useState(9);
   const name = useRef();
   const surname = useRef();
@@ -86,6 +15,7 @@ const Main = () => {
   const city = useRef();
   const contact = useRef();
   const email = useRef();
+  const history = useHistory();
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(name.current.value);
@@ -283,7 +213,11 @@ const Main = () => {
         </div>
         {pacients.map((pacient) => {
           return (
-            <div className={classes.pacient} key={pacient.id}>
+            <div
+              className={classes.pacient}
+              key={pacient.id}
+              onClick={() => history.push(`/profile/${pacient.id}`)}
+            >
               <h3>{pacient.name}</h3>
               <h3>{pacient.dateOfBirth}</h3>
               <h3>{pacient.city}</h3>

@@ -3,12 +3,16 @@ import { Switch } from "react-router-dom";
 import Pacients from "./pages/Pacients";
 import Login from "./pages/Login";
 import { useState } from "react";
+import ProfilPacijenta from "./pages/ProfilPacijenta";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   return (
     <Switch>
       <Route path="/pacients">
         <Pacients loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      </Route>
+      <Route path="/profile/:id">
+        <ProfilPacijenta />
       </Route>
       <Route path="/">
         <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
