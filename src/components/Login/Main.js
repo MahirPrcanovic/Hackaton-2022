@@ -27,7 +27,7 @@ const Main = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             width="192"
             height="192"
-            fill="#000000"
+            fill="#02c8b6"
             viewBox="0 0 256 256"
             className={classes.icon}
           >
@@ -40,7 +40,7 @@ const Main = (props) => {
               rx="45.3"
               transform="translate(-53 128) rotate(-45)"
               fill="none"
-              stroke="#000000"
+              stroke="#02c8b5"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="16"
@@ -51,7 +51,7 @@ const Main = (props) => {
               x2="160"
               y2="160"
               fill="none"
-              stroke="#000000"
+              stroke="#02c8b5"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="16"
@@ -62,13 +62,17 @@ const Main = (props) => {
               x2="184.5"
               y2="88.5"
               fill="none"
-              stroke="#000000"
+              stroke="#02c8b5"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="16"
             ></line>
           </svg>
-          <h2>Intellect</h2>
+          <h2>INTELLECT</h2>
+        </div>
+        <div className={classes.welcomeMsg}>
+          <h2>Dobro došli</h2>
+          <p>Unesite podatke za prijavu na račun</p>
         </div>
         <div className={classes.formPart}>
           <form className={classes.formDiv} onSubmit={submitHandler}>
@@ -76,19 +80,22 @@ const Main = (props) => {
               type="text"
               ref={username}
               className={classes.input}
-              placeholder="username"
+              placeholder="Unesite email"
             />
             <input
               type="password"
               ref={password}
               className={classes.input}
-              placeholder="password"
+              placeholder="Unesite lozinku"
             />
             <button type="submit" className={classes.button}>
               Login
             </button>
           </form>
         </div>
+        <p className={classes.passwordMsg}>
+          Zaboravili ste lozinku? <em>Resetuj lozinku</em>
+        </p>
       </div>
     </div>
   );

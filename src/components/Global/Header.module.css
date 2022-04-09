@@ -18,8 +18,16 @@
   height: 2.4rem;
 }
 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2.6rem;
   color: #02c8b5;
+}
+.logo p {
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-left: 1rem;
 }
 .info {
   display: flex;

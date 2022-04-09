@@ -6,18 +6,18 @@
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  background-color: #02c8b5;
+  background-color: #02c8b530;
 }
 .form {
   width: 50rem;
   height: 50rem;
-  border: 1px solid black;
+  box-shadow: 5px 5px 30px #888888;
   background-color: white;
   border-radius: 10px;
 }
 .intro {
   width: 100%;
-  height: 30%;
+  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,14 +32,16 @@
 }
 .formDiv {
   display: flex;
+  width: 60%;
   flex-direction: column;
   gap: 3rem;
+  margin-bottom: 3rem;
 }
 .input {
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid #cbcbcb;
   font-family: "Montserrat", sans-serif;
-  padding-left: 0.4rem;
+  padding-left: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 4px;
@@ -48,7 +50,7 @@
   color: white;
   border: none;
   background-color: #02c8b5;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 7px;
   cursor: pointer;
   font-size: 1.4rem;
@@ -62,5 +64,35 @@
   height: 3.2rem;
 }
 .intro > h2 {
-  font-size: 3rem;
+  font-size: 2.6rem;
+  font-weight: bolder;
+  color: #02c8b5;
+  margin-left: 1rem;
+}
+.welcomeMsg p,
+h2 {
+  text-align: center;
+  color: #7d7d7d;
+}
+.welcomeMsg p {
+  padding-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-bottom: 5rem;
+}
+.welcomeMsg h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.passwordMsg {
+  padding-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #7d7d7d;
+  text-align: center;
+}
+.passwordMsg em {
+  font-style: normal;
+  color: #02c8b5;
 }
