@@ -4,6 +4,8 @@ import { Redirect } from "react-router-dom";
 import classes from "./Main.module.css";
 
 const Main = (props) => {
+  //username : admin
+  //password: admin123
   const username = useRef();
   const password = useRef();
   const history = useHistory();

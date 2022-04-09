@@ -18,6 +18,27 @@ const Main = (props) => {
   const contact = useRef();
   const email = useRef();
   const history = useHistory();
+  const nameOfMedicine = useRef();
+  const insertedBy = useRef();
+  const timeOfInsert = useRef();
+  const quantity = useRef();
+  const medicineSubmitHandler = (e) => {
+    e.preventDefault();
+    setMedicine((oldMed) => {
+      return [
+        ...oldMed,
+        {
+          id: `${nameOfMedicine.current.value.slice(0, 1)}${
+            timeOfInsert.current.value
+          }`,
+          name: nameOfMedicine.current.value,
+          createdBy: insertedBy.current.value,
+          dateOfInsert: timeOfInsert.current.value,
+          quantity: quantity.current.value,
+        },
+      ];
+    });
+  };
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(name.current.value);
@@ -260,7 +281,7 @@ const Main = (props) => {
                   d="M12 4v16m8-8H4"
                 />
               </svg>
-              Novi Pacijent
+              Novi Lijek
             </div>
           ) : (
             <div className={classes.fixed2}>
@@ -280,30 +301,76 @@ const Main = (props) => {
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-                <h2>Dodaj novog pacijenta</h2>
+                <h2>Dodaj novi lijek</h2>
               </div>
               <div className={classes.before}>
-                <div className={classes.picture}></div>
                 <div>
-                  <h2>Osobne informacije</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="192"
+                    height="192"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                    className={classes.medicine}
+                  >
+                    <rect width="256" height="256" fill="none"></rect>
+                    <rect
+                      x="14.9"
+                      y="82.7"
+                      width="226.3"
+                      height="90.51"
+                      rx="45.3"
+                      transform="translate(-53 128) rotate(-45)"
+                      fill="none"
+                      stroke="#000000"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="16"
+                    ></rect>
+                    <line
+                      x1="96"
+                      y1="96"
+                      x2="160"
+                      y2="160"
+                      fill="none"
+                      stroke="#000000"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="16"
+                    ></line>
+                    <line
+                      x1="160.1"
+                      y1="112.1"
+                      x2="184.5"
+                      y2="88.5"
+                      fill="none"
+                      stroke="#000000"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="16"
+                    ></line>
+                  </svg>
+                </div>
+                <div>
+                  <h2>Informacije o lijeku</h2>
                 </div>
               </div>
-              <form onSubmit={submitHandler} className={classes.form}>
+              <form onSubmit={medicineSubmitHandler} className={classes.form}>
                 <div className={classes.form}>
                   <input
                     type="text"
                     name="name"
                     className={classes.formInput}
-                    placeholder="Ime"
-                    ref={name}
+                    placeholder="Ime i prezime unosioca"
+                    ref={insertedBy}
                     required
                   />
                   <input
                     type="text"
                     name="name"
                     className={classes.formInput}
-                    placeholder="Prezime"
-                    ref={surname}
+                    placeholder="Naziv lijeka"
+                    ref={nameOfMedicine}
                     required
                   />
                   <div className={classes.datum}>
@@ -311,43 +378,40 @@ const Main = (props) => {
                       type="text"
                       name="name"
                       className={classes.formInput}
-                      placeholder="Datum rođenja"
-                      ref={dateOfBirth}
+                      placeholder="Datum unosa u sistem"
+                      ref={timeOfInsert}
                       required
                     />
                     <input
                       type="text"
                       name="name"
                       className={classes.formInput}
-                      placeholder="Spol"
-                      ref={sex}
+                      placeholder="Kolicina"
+                      ref={quantity}
                       required
                     />
                   </div>
-                  <input
-                    type="text"
-                    name="name"
-                    className={classes.formInput}
-                    placeholder="Grad"
-                    ref={city}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="name"
-                    className={classes.formInput}
-                    placeholder="Kontakt"
-                    ref={contact}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="name"
-                    className={classes.formInput}
-                    placeholder="Email"
-                    ref={email}
-                    required
-                  />
+                  {/* <input
+                type="text"
+                name="name"
+                className={styles.formInput}
+                placeholder="Grad"
+                required
+              />
+              <input
+                type="text"
+                name="name"
+                className={styles.formInput}
+                placeholder="Kontakt"
+                required
+              />
+              <input
+                type="text"
+                name="name"
+                className={styles.formInput}
+                placeholder="Email"
+                required
+              /> */}
                 </div>
                 <button
                   htmlFor="submit"
@@ -425,6 +489,7 @@ const Main = (props) => {
                   <h3>{med.createdBy}</h3>
                   <h3>{med.dateOfInsert}</h3>
                   <h3>{med.quantity}</h3>
+                  <button className={classes.removeButton}>Ukloni</button>
                 </div>
               );
             })}
