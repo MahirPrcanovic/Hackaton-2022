@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Header.module.css";
 const Header = () => {
   return (
@@ -23,7 +23,7 @@ const Header = () => {
             />
           </svg>
           <select name="sort" id="sort" className={classes.select}>
-            <option value="All">BS</option>
+            <option value="All">BOS</option>
             <option value="720p">CRO</option>
             <option value="1080p">SRB</option>
           </select>

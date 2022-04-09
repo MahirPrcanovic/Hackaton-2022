@@ -59,9 +59,9 @@ const Sidebar = () => {
               d="M168,72V56a16,16,0,0,0-16-16H104A16,16,0,0,0,88,56V72"
               fill="none"
               stroke={active ? "#02c8b5" : "#000000"}
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></path>
             <line
               x1="128"
@@ -70,9 +70,9 @@ const Sidebar = () => {
               y2="172"
               fill="none"
               stroke={active ? "#02c8b5" : "#000000"}
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></line>
             <line
               x1="156"
@@ -81,9 +81,9 @@ const Sidebar = () => {
               y2="144"
               fill="none"
               stroke={active ? "#02c8b5" : "#000000"}
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
             ></line>
           </svg>
         </button>

@@ -72,3 +72,6 @@
 .select:focus {
   outline: none;
 }
+.select:hover {
+  animation: none;
+}
