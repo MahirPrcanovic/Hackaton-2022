@@ -1,14 +1,13 @@
 import React from "react";
 import classes from "./Sidebar.module.css";
 import { useState } from "react";
-const Sidebar = () => {
-  const [active, setActive] = useState(false);
+const Sidebar = (props) => {
   return (
     <div className={classes.container}>
       <div className={classes.patients}>
         <button
-          className={`${classes.button} ${!active ? classes.active : ""}`}
-          onClick={() => setActive(false)}
+          className={`${classes.button} ${!props.active ? classes.active : ""}`}
+          onClick={() => props.setActive(false)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +27,8 @@ const Sidebar = () => {
       </div>
       <div className={classes.medicine}>
         <button
-          className={`${classes.button} ${active ? classes.active : ""}`}
-          onClick={() => setActive(true)}
+          className={`${classes.button} ${props.active ? classes.active : ""}`}
+          onClick={() => props.setActive(true)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +38,7 @@ const Sidebar = () => {
             viewBox="0 0 256 256"
             className={classes.icon}
             style={{
-              color: active ? "#02c8b5" : "#000000",
+              color: props.active ? "#02c8b5" : "#000000",
             }}
           >
             <rect width="256" height="256" fill="none"></rect>
@@ -50,7 +49,7 @@ const Sidebar = () => {
               height="144"
               rx="8"
               fill="none"
-              stroke={active ? "#02c8b5" : "#000000"}
+              stroke={props.active ? "#02c8b5" : "#000000"}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="16"
@@ -58,7 +57,7 @@ const Sidebar = () => {
             <path
               d="M168,72V56a16,16,0,0,0-16-16H104A16,16,0,0,0,88,56V72"
               fill="none"
-              stroke={active ? "#02c8b5" : "#000000"}
+              stroke={props.active ? "#02c8b5" : "#000000"}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="16"
@@ -69,7 +68,7 @@ const Sidebar = () => {
               x2="128"
               y2="172"
               fill="none"
-              stroke={active ? "#02c8b5" : "#000000"}
+              stroke={props.active ? "#02c8b5" : "#000000"}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="16"
@@ -80,7 +79,7 @@ const Sidebar = () => {
               x2="100"
               y2="144"
               fill="none"
-              stroke={active ? "#02c8b5" : "#000000"}
+              stroke={props.active ? "#02c8b5" : "#000000"}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="16"

@@ -10,8 +10,8 @@ const Pacients = (props) => {
   return (
     <Fragment>
       <Header />
-      <Sidebar />
-      <Main />
+      <Sidebar active={props.active} setActive={props.setActive} />
+      <Main active={props.active} />
     </Fragment>
   );
 };

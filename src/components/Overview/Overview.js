@@ -16,22 +16,28 @@ const Overview = (props) => {
         </div>
         <div className={styles.infoHolder}>
           <h2>Prezime</h2>
-          <p>{user.name.slice(index, -1)}</p>
+          <p>{user.name.slice(index)}</p>
+        </div>
+        <div className={`${styles.infoHolder} ${styles.email}`}>
+          <h2>E-mail</h2>
+          <p>{user.email}</p>
         </div>
       </div>
-      <div className={styles.infoHolder}>
-        <h2>Spol</h2>
-        <p>-</p>
+      <div className={styles.other}>
+        <div className={styles.infoHolder}>
+          <h2>Spol</h2>
+          <p>{user.sex}</p>
+        </div>
+        <div className={styles.infoHolder}>
+          <h2>Datum rođenja</h2>
+          <p>{user.dateOfBirth}</p>
+        </div>
+        <div className={styles.infoHolder}>
+          <h2>Grad</h2>
+          <p>{user.city}</p>
+        </div>
+        <div className={styles.gender}></div>
       </div>
-      <div className={styles.infoHolder}>
-        <h2>Datum rođenja</h2>
-        <p>{user.dateOfBirth}</p>
-      </div>
-      <div className={styles.infoHolder}>
-        <h2>Grad</h2>
-        <p>{user.city}</p>
-      </div>
-      <div className={styles.gender}></div>
     </div>
   );
 };

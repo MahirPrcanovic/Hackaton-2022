@@ -5,14 +5,20 @@ import Login from "./pages/Login";
 import { useState } from "react";
 import ProfilPacijenta from "./pages/ProfilPacijenta";
 function App() {
+  const [active, setActive] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   return (
     <Switch>
       <Route path="/pacients">
-        <Pacients loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+        <Pacients
+          loggedIn={loggedIn}
+          setLoggedIn={setLoggedIn}
+          active={active}
+          setActive={setActive}
+        />
       </Route>
       <Route path="/profile/:id">
-        <ProfilPacijenta />
+        <ProfilPacijenta active={active} setActive={setActive} />
       </Route>
       <Route path="/">
         <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
