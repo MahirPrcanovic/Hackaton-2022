@@ -46,4 +46,9 @@
   background-color: #02c8b5;
   padding: 1rem;
   border-radius: 5px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: black;
+  color: #02c8b5;
 }
