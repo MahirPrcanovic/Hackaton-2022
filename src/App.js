@@ -4,12 +4,13 @@ import Pacients from "./pages/Pacients";
 import Login from "./pages/Login";
 import { useState } from "react";
 import ProfilPacijenta from "./pages/ProfilPacijenta";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 function App() {
   const [active, setActive] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   return (
     <Switch>
-      <Route path="/pacients">
+      <Route path="/pacients" exact>
         <Pacients
           loggedIn={loggedIn}
           setLoggedIn={setLoggedIn}
@@ -17,16 +18,14 @@ function App() {
           setActive={setActive}
         />
       </Route>
-      <Route path="/profile/:id">
+      <Route path="/profile/:id" exact>
         <ProfilPacijenta active={active} setActive={setActive} />
       </Route>
       <Route path="/">
         <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       </Route>
-      <Route path="/about">
-        <div>About</div>
-        <div>Test</div>
-        <div>Test</div>
+      <Route path="*">
+        <ErrorBoundary />
       </Route>
     </Switch>
   );
