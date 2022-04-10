@@ -80,13 +80,13 @@ const Main = (props) => {
               type="text"
               ref={username}
               className={classes.input}
-              placeholder="Unesite email"
+              placeholder="Username (admin)"
             />
             <input
               type="password"
               ref={password}
               className={classes.input}
-              placeholder="Unesite lozinku"
+              placeholder="Password (admin123)"
             />
             <button type="submit" className={classes.button}>
               Login

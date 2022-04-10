@@ -3,7 +3,7 @@
   width: 92%;
   min-height: calc(100vh - 45px);
   margin: 0 auto;
-  background-color: #02c8b520;
+  background-color: #53f3e327;
   font-family: "Montserrat", sans-serif;
 }
 .text {
@@ -109,7 +109,7 @@
   right: 0;
   width: 45rem;
   height: 50rem;
-  background-color: rgb(228, 226, 226);
+  background-color: #ffffffff;
   display: flex;
   flex-direction: column;
   border-radius: 20px;

@@ -6,6 +6,8 @@
   flex-direction: column;
 }
 h2 {
+  display: flex;
+  justify-content: flex-start;
   font-size: 1.6rem;
   color: #525151;
 }
